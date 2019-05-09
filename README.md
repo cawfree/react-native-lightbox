@@ -1,5 +1,5 @@
 # react-native-lightbox
-A stateful `<LightBox/>` component for React Native, mainly featuring the ability to render arbitrary content within the `<LightBox />` once it has opened up.
+A stateful `<LightBox/>` component for React Native, mainly featuring the ability to render arbitrary content once expanded.
 
 ## 🚀 Getting Started
 
