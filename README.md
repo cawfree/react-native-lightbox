@@ -17,7 +17,6 @@ yarn add @cawfree/react-native'lightbox
 import React from 'react';
 import {
   View,
-  Dimensions,
   TouchableOpacity,
   Text,
 } from 'react-native';
@@ -39,45 +38,47 @@ export default class Example extends React.Component {
       open,
     } = this.state;
     return (
-      <LightBox
-        duration={200}
-        horizontal
-        open={open}
-        renderOpen={() => (
-          <View
-            style={{
-              width,
-              height,
-              backgroundColor: 'blue',
-            }}
-          />
-        )}
-        renderBackdrop={() => (
-          <View
-            style={{
-              width,
-              height,
-              backgroundColor: 'black',
-            }}
-          >
-          <View>
-        )}
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: 'blue',
+        }}
       >
         <TouchableOpacity
-          onPress={() => this.setState({ open: !open })}
           style={{
-            width: 100,
-            height: 100,
-            justifyContent: 'center',
-            alignItems: 'center',
+            width: 50,
+            height: 50,
+            backgroundColor: 'red',
           }}
+          onPress={() => this.setState({
+            open: true,
+          })}
         >
-          <Text
+          <LightBox
+            open={open}
+            renderBackdrop={() => (
+              <View
+                style={{
+                  flex: 1,
+                  backgroundColor: '#000000AA',
+                }}
+              />
+            )}
+            onRequestClose={() => this.setState({
+              open: false,
+            })}
           >
-            {'Tap to expand.'}
-          </Text>
+            <View
+              style={{
+                width: 50,
+                height: 50,
+                backgroundColor: 'yellow',
+              }}
+            >
+            </View>
+          </LightBox>
         </TouchableOpacity>
-      </LightBox>
+      </View>
     );
   }
 }
