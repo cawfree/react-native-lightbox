@@ -1,0 +1,15 @@
+{
+  "name": "@cawfree/react-native-lightbox",
+  "version": "1.0.0",
+  "description": "A stateful <LightBox/> component for React Native.",
+  "main": "index.js",
+  "repository": "https://github.com/Cawfree/react-native-lightbox",
+  "author": "Alex Thomas (@cawfree)",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": [
+    "prop-types": "^15.6.1",
+    "react-timer-mixin": "^0.13.4",
+    "react-native": "^0.59.1"
+  ]
+}
