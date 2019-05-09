@@ -9,7 +9,7 @@ npm install --save @cawfree/react-native-lightbox
 ```
 Or using [yarn](https://www.npmjs.com/package/@cawfree/react-native-lightbox):
 ```
-yarn add @cawfree/react-native'lightbox
+yarn add @cawfree/react-native-lightbox
 ```
 
 ## ✏️ Example
