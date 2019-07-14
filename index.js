@@ -294,6 +294,7 @@ class LightBox extends React.Component {
       children,
       renderOpen,
       renderBackdrop,
+      swipeToClose,
     } = this.props;
     const {
       dragging,
@@ -336,7 +337,7 @@ class LightBox extends React.Component {
             {renderBackdrop && renderBackdrop()}
           </Animated.View>
           <Animated.View
-            {...panResponder.panHandlers}
+            {...(swipeToClose ? panResponder.panHandlers : {})}
             style={{
               left: targetPosition.x,
               top: targetPosition.y,
@@ -368,6 +369,7 @@ LightBox.propTypes = ({
   distance: PropTypes.number,
   getOrigin: PropTypes.func,
   rotating: PropTypes.bool,
+  swipeToClose: PropTypes.bool,
 });
 
 LightBox.defaultProps = ({
@@ -383,6 +385,7 @@ LightBox.defaultProps = ({
       height,
     });
   },
+  swipeToClose: true,
 });
 
 const styles = StyleSheet.create({
